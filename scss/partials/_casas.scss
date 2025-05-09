@@ -1,0 +1,39 @@
+.casa-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #1e88e5;
+      margin-top: 0.5rem;
+    }
+  }
+}

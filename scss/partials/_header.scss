@@ -1,0 +1,43 @@
+// Header
+.site-header {
+    background-color: $color-fondo-header;
+    color: $color-texto-header;
+    padding: $padding-header 0;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .navbar {
+      ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+      }
+  
+      li {
+        a {
+          text-decoration: none;
+          color: $color-texto-header;
+          font-size: 1.1rem;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #ff6347; // Color al pasar el mouse
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'extend';
+
+.deptos {
+  padding: 2rem;
+  background-color: $gris-claro;
+
+  .deptos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .deptos__item {
+    background-color: $blanco;
+    border-radius: 1rem;
+    overflow: hidden;
+    @extend %tarjeta;
+    animation: fadeSlide 0.7s ease both;
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .deptos__info {
+      padding: 1rem;
+
+      h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        color: $gris-oscuro;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $gris;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
